@@ -60,7 +60,7 @@ public class TestAssert {
 	}
 
 //Assert That(T actual, org.hamcrest.Matcher<T> matcher)
-	//Equality
+	//Same reference
 	@Test
 	public void testAssertThatIsForEquality() {
 		String a = "hello";
@@ -73,6 +73,7 @@ public class TestAssert {
 		assertThat(a, is(not("Hello")));
 	}
 	
+	//Equal to (contains same content)
 	@Test
 	public void testAssertThatIs() {
 		String a = "hello";
@@ -102,12 +103,31 @@ public class TestAssert {
 	
 	@Test
 	public void testEqualTo() {
-		String aName = new String("emily");
-		String anotherName = new String("emily");
-		System.out.println(aName.equals(anotherName));
+		String a = new String("emily");
+		String b = new String("emily");
+		System.out.println(a.equals(b));
+	}
+	
+	@Test
+	public void testAssertThatSameInstance() {
+		String a = "hello";
+		String b = "hello";
+		assertThat(a, sameInstance(b));
+	}
+	
+	@Test
+	public void testAssertThatNOTSameInstance() {
+		String a = "hello";
+		String b = "helloB";
+		assertThat(a,not(sameInstance(b)));
 	}
 	
 //Assert True
+	@Test
+	public void testAssertTrue() {
+		String a = "hello";
+		assertTrue(a.endsWith("o"));
+	}
 	
 	
 //Fail
