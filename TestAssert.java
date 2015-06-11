@@ -131,4 +131,9 @@ public class TestAssert {
 	
 	
 //Fail
+	@Test
+	//Good for reminder to implement test. Will fail until test is implemented.
+	public void testFail() {
+		fail("Test for fail not yet implemented. Please implement.");
+	}
 }
