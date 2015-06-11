@@ -59,7 +59,7 @@ public class TestAssert {
 		assertNotEquals(a,b);
 	}
 
-//JUnit's Assert That(T actual, org.hamcrest.Matcher<T> matcher) (as opposed to Hamcrest's Assert That)
+//JUnit's Assert That(T actual, org.hamcrest.Matcher<T> matcher)  (as opposed to Hamcrest's Assert That)
 	//Same reference
 	@Test
 	public void testAssertThatIsForEquality() {
